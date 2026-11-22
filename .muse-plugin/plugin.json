@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "oz-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Oz Docs",
   "description": "Write and revise Markdown documents, return to them by name, and publish finished pages.",
   "compat": {

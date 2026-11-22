@@ -29,7 +29,7 @@ The `write-doc` folder holds a `references` file with path rules, revision behav
 
 ### Hook
 
-One `PreToolUse` hook runs before this plugin's `publish_page` and `delete_doc` tools. Publishing makes a document public and deleting one is permanent, so Claude Code asks you to confirm each call and tells you which document is affected. The hook is the script `hooks/confirm-public-or-permanent.cjs`. It needs Node.js on your PATH, reads the pending tool call from standard input, and does not touch files or the network.
+One `PostToolUse` hook runs in Claude Code after this plugin's `publish_page` tool returns. It is the shell script `hooks/publish-receipt.sh`, which prints a fixed cue so that Claude gives you the exact page link, names the document it came from, and says who can read it, or says plainly that nothing was published. It never reads the tool payload, writes to disk or uses the network, and it never interrupts a tool call.
 
 ## What the plugin connects to and sends
 
