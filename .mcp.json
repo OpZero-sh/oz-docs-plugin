@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "oz-docs": {
+      "type": "http",
+      "url": "https://oz-docs.mcp.opzero.sh/mcp"
+    }
+  }
+}

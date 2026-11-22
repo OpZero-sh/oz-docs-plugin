@@ -1,0 +1,10 @@
+{
+  "oz-docs": {
+    "url": "https://oz-docs.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "list_docs",
+      "read_doc"
+    ],
+    "token_env": "OZ_DOCS_ACCESS_TOKEN"
+  }
+}

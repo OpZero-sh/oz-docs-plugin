@@ -1,0 +1,25 @@
+{
+  "name": "oz-docs",
+  "displayName": "Oz Docs",
+  "version": "1.0.0",
+  "description": "Write and revise Markdown documents, return to them by name, and publish finished pages.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://github.com/OpZero-sh/oz-docs-plugin",
+  "repository": "https://github.com/OpZero-sh/oz-docs-plugin",
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "documents",
+    "editor",
+    "publishing",
+    "mcp"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/OpZero-sh/oz-docs-plugin#readme",
+  "supportUrl": "https://opzero.sh/support",
+  "privacyPolicyUrl": "https://opzero.sh/privacy",
+  "termsOfServiceUrl": "https://opzero.sh/terms"
+}
