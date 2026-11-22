@@ -13,6 +13,18 @@
       {
         "id": "write-doc",
         "path": "skills/write-doc/SKILL.md"
+      },
+      {
+        "id": "publish-page",
+        "path": "skills/publish-page/SKILL.md"
+      },
+      {
+        "id": "work-in-editor",
+        "path": "skills/work-in-editor/SKILL.md"
+      },
+      {
+        "id": "manage-attachments",
+        "path": "skills/manage-attachments/SKILL.md"
       }
     ],
     "mcpServers": []
