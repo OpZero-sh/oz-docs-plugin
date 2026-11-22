@@ -1,13 +1,12 @@
 {
   "hooks": {
-    "PreToolUse": [
+    "PostToolUse": [
       {
-        "matcher": "^mcp__plugin_oz-docs_oz-docs__(publish_page|delete_doc)$",
+        "matcher": "^mcp__plugin_oz-docs_oz-docs__publish_page$",
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/confirm-public-or-permanent.cjs\"",
-            "timeout": 5
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/publish-receipt.sh\""
           }
         ]
       }

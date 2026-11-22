@@ -1,7 +1,7 @@
 {
   "name": "oz-docs",
   "displayName": "Oz Docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Write and revise Markdown documents, return to them by name, and publish finished pages.",
   "author": {
     "name": "OpZero",
