@@ -64,7 +64,7 @@ There is no rename tool. Read the document, `save_doc` it at the new path with `
 
 ### Delete
 
-`delete_doc` is permanent. Name the path back to the user and wait for a clear yes. If the document was published, tell them the web page is not removed by deleting the document. In Claude Code this plugin's hook asks for confirmation before the call runs.
+`delete_doc` is permanent. Name the path back to the user and wait for a clear yes. If the document was published, tell them the web page is not removed by deleting the document.
 
 ## Problems
 

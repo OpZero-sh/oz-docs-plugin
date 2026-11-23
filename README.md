@@ -27,9 +27,9 @@ The `write-doc` folder holds a `references` file with path rules, revision behav
 
 `document-editor` reviews a stored document and returns proposed edits tied to its section headings. It can only read: its tools are `list_docs`, `read_doc` and `doc_attachments`. It never saves, publishes or deletes.
 
-### Hook
+### Hooks
 
-One `PreToolUse` hook runs before this plugin's `publish_page` and `delete_doc` tools. Publishing makes a document public and deleting one is permanent, so Claude Code asks you to confirm each call and tells you which document is affected. The hook is the script `hooks/confirm-public-or-permanent.cjs`. It needs Node.js on your PATH, reads the pending tool call from standard input, and does not touch files or the network.
+None. The plugin has no hooks and runs no code on your machine. Publishing makes a document public and deleting one is permanent, so the `publish-page` and `write-doc` skills tell Claude to name the document and ask you to confirm before it makes either call.
 
 ## What the plugin connects to and sends
 
@@ -40,11 +40,14 @@ One `PreToolUse` hook runs before this plugin's `publish_page` and `delete_doc` 
 
 ### Optional files for other clients
 
-These files are not run by Claude. They exist so the same product can be used from other assistants.
+These files are not used by Claude. They exist so the same product can be used from other assistants.
 
-- `scripts/build_openai.py` builds a ZIP package for ChatGPT and Codex from the files in this repository. It reads local files and writes ZIP files to the folder you name. It makes no network calls.
-- `integrations/grok_example.py` is a sample for the xAI API. It runs only when you run it. With `--dry-run` it prints a request and sends nothing. Without it, the script reads `XAI_API_KEY` from your environment and sends one request to `https://api.x.ai/v1/responses`. If `OZ_DOCS_ACCESS_TOKEN` is set, that OpZero access token is included in the request so that xAI can call the Oz Docs server for you.
 - `integrations/grok-servers.json`, `integrations/muse-settings.json` and the files under `integrations/openai` are configuration for those clients. They contain the same server URL and no credentials.
+
+The two scripts that read them are not in this repository. They are in the catalog repository, [OpZero-sh/plugins](https://github.com/OpZero-sh/plugins), and run only when you clone it and run them yourself.
+
+- `tools/build_openai.py` builds a ZIP package for ChatGPT and Codex from the skills, the license, the product icon and the files under `integrations/openai` in a checkout of this repository. It reads local files and writes ZIP files to the folder you name. It makes no network calls.
+- `tools/grok_example.py` is a sample for the xAI API. It reads `integrations/grok-servers.json`. With `--dry-run` it prints a request and sends nothing. Without it, the script reads `XAI_API_KEY` from your environment and sends one request to `https://api.x.ai/v1/responses`. If `OZ_DOCS_ACCESS_TOKEN` is set, that OpZero access token is included in the request so that xAI can call the Oz Docs server for you.
 
 ## Limits
 
