@@ -21,7 +21,7 @@ Do not publish because a document looks finished. The user has to ask for it.
 1. Identify the document. If the user did not give a path, call `list_docs` and confirm which one.
 2. Read it with `read_doc`. Check what is about to become public: credentials, private names, contact details, internal links, draft notes. Raise anything doubtful before going on.
 3. Check for a name clash. The page name is built from the file name only, not its folder. `notes/launch.md` and `plans/launch.md` would publish to the same page, and the second would replace the first. If another document shares the file name, tell the user and suggest renaming one.
-4. Confirm with the user: which document, and that it will be public. In Claude Code this plugin's hook also asks for confirmation before the call runs.
+4. Confirm with the user: name the document path and say that the page will be public. Wait for a clear yes before the call.
 5. Call `publish_page` with `path`. Leave `markdown` out to publish the document as stored.
 6. Give the user the URL from the result.
 
